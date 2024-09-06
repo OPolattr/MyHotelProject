@@ -1,0 +1,28 @@
+﻿@model GetStaffViewModel
+@{
+    ViewData["Title"] = "GetStaff";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Personel ID</th>
+            <th>Personel Adı</th>
+            <th>Personel Unvanı</th>
+            <th>Personel Sosyal Medya 1</th>
+            <th>Personel Sosyal Medya 2</th>
+            <th>Personel Sosyal Medya 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.StaffID</td>
+            <td>@Model.StaffName</td>
+            <td>@Model.StaffTitle</td>
+            <td>@Model.StaffSocialMedia1</td>
+            <td>@Model.StaffSocialMedia2</td>
+            <td>@Model.StaffSocialMedia3</td>
+        </tr>
+    </tbody>
+</table>
