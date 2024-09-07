@@ -13,7 +13,6 @@ namespace HotelProject.EntityLayer.Concrete
         public string AppUserSurname { get; set; }
         public string? AppUserCity { get; set; }
         public string AppUserImageUrl { get; set; }
-        public string? Gender { get; set; }
         public string? AppUserWorkDepartment { get; set; }
         public int WorkLocationID { get; set; }
         public virtual WorkLocation WorkLocation { get; set; }
