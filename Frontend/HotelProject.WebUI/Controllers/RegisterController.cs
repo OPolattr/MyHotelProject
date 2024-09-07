@@ -31,7 +31,7 @@ namespace HotelProject.WebUI.Controllers
             }
             var appUser = new AppUser()
             {
-                AppUserName = createNewUserDto.AppUserSurname,
+                AppUserName = createNewUserDto.AppUserName,
                 Email = createNewUserDto.Mail,
                 AppUserSurname = createNewUserDto.AppUserSurname,
                 UserName = createNewUserDto.Username,

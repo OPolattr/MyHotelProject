@@ -1,19 +1,13 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HotelProject.EntityLayer.Concrete;
 
-namespace HotelProject.EntityLayer.Concrete
+namespace HotelProject.WebUI.Dtos.AppUserDto
 {
-    public class AppUser : IdentityUser<int>
+    public class ResultAppUserDto
     {
         public string AppUserName { get; set; }
         public string AppUserSurname { get; set; }
         public string? AppUserCity { get; set; }
         public string AppUserImageUrl { get; set; }
-        public string? Gender { get; set; }
         public string? AppUserWorkDepartment { get; set; }
         public int WorkLocationID { get; set; }
         public virtual WorkLocation WorkLocation { get; set; }
