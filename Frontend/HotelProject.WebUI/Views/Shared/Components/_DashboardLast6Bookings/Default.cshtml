@@ -1,0 +1,71 @@
+﻿@model List<ResultLast6BookingsDto>
+<div class="table-responsive">
+    <table class="table table-xs mb-0">
+        <thead>
+            <tr>
+                <th>Misafir İsmi</th>
+                <th>Mail</th>
+                <th>Durum</th>
+                <th>Durum</th>
+                <th>Giriş - Çıkış Tarihleri</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Mail</td>
+                    @if (item.Status == "Onaylandı")
+                    {
+                        <td>
+                            <div>
+                                <div class="progress" style="height: 6px">
+                                    <div class="progress-bar bg-success" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><i class="fa fa-circle-o text-success  mr-2"></i> @item.Status</td>
+                    }
+                    @if (item.Status == "Müşteri Aranacak")
+                    {
+                        <td>
+                            <div>
+                                <div class="progress" style="height: 6px">
+                                    <div class="progress-bar bg-warning" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><i class="fa fa-circle-o text-warning  mr-2"></i> @item.Status</td>
+                    }
+                    @if (item.Status == "İptal Edildi")
+                    {
+                        <td>
+                            <div>
+                                <div class="progress" style="height: 6px">
+                                    <div class="progress-bar bg-danger" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><i class="fa fa-circle-o text-danger  mr-2"></i> @item.Status</td>
+                    }
+                    @if (item.Status == "Onay Bekliyor")
+                    {
+                        <td>
+                            <div>
+                                <div class="progress" style="height: 6px">
+                                    <div class="progress-bar bg-info" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><i class="fa fa-circle-o text-info  mr-2"></i> @item.Status</td>
+                    }
+                    <td>
+                        <span>@item.Checkin</span>
+                        <span class="m-0 pl-3">@item.CheckOut</span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
